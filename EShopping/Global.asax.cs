@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using EShopping.Models.Data;
+using System.Data.Entity;
 
 namespace EShopping
 {
@@ -16,6 +18,11 @@ namespace EShopping
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<EShoppingDb>(null);
+
+
+
         }
     }
 }
